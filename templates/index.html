@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>flask demo</title>
+   
+    <link rel="stylesheet" type="text/css" href= {{url_for('static', filename='style.css')}} />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='sword.jpg') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  </head>
+  
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Waquar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact us</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      
+   
+    <!---------------header_------------->
+	  <header>
+	          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img src="{{url_for('static',filename='images3.jpg')}}" class="img-fluid about_img">
+      <div class="carousel-caption  d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <img src="{{url_for('static',filename='images11.jpg')}}" class="img-fluid about_img">
+      <div class="carousel-caption  d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static',filename='images56.jpg')}}" class="img-fluid about_img">
+      <div class="carousel-caption  d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>        
+	
+	  </header>
+	<!---------------about__-section------------>
+	<section class="main_heading my-1 bg-secondary">
+	
+    <div class="text-center">
+      <h1 class="display-4">about us</h1>
+      <hr class="w-25 mx-auto" />
+      
+    </div>
+
+       <div class="container">
+      <div class="row my-1">
+         <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+           <figure>
+                <img src="{{url_for('static',filename='images3.jpg')}}" alt="about image" class="img-fluid about_img">
+         </figure>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 col-xxl-6 d-flex justify-content-center align-items-center flex-column">
+        <h1>My journey</h1>
+        <p>Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking,which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.</p>
+        <button type="button" class="btn btn-info">Check More</button>
+      </div>
+      
+      </div>
+     </div>
+
+
+
+</section>
+
+   
+
+<!---------------contact us section_------------->
+<section class="main_heading my-1 pt-5 bg-secondary">
+	
+			<div class="text-center">
+			     <h1 class="display-4">Contact us</h1>
+				 <hr class="w-25 mx-auto" />
+			 </div>
+			 
+			 <div class="container">
+			     <div class="row">
+                <div class="col-xxl-8 col-10 col-md-8 mx-auto">
+     
+                        <form action="/submit_form" method ="post">
+                          <div class="mb-3">
+                            <label for="exampleInputname" class="form-label">Name</label>
+                            <input type="name" name="name" class="form-control" id="exampleInputname" aria-describedby="nameHelp">
+                            <div id="namelHelp" class="form-name">We'll never share your name with anyone else.</div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" name="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password"  name="password" class="form-control" id="exampleInputPassword1">
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                              <textarea type="text" class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                          <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                     </div>
+			 
+                 </div>
+			 
+			     </div>
+
+          </section>
+<!---------------footer section------------->
+			 
+		<footer class="bg-secondary   text-center text-danger ">	
+        <p> @Copyright Waquaraz</p>
+     <p>if you have any suggestion Please contact us at Mob:-898605****</p>
+      </footer>		
+
+      <script  src={{url_for('static', filename='script.js')}}></script>
+  </body>	
+</html>	

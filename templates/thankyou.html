@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>flask demo</title>
+   
+    <link rel="stylesheet" type="text/css" href= {{url_for('static', filename='style.css')}} />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='sword.jpg') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  </head>
+  
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Waquar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact us</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <!--------------thank u section---------------->
+      <section class="main_heading about_us my-1 bg-secondary">
+	
+        
+    
+           <div class="contain">
+              <div class="row my-1">
+            
+                <div class="thank">
+                  
+                  <h1>{{message}}</h1>
+                </div>  
+                
+              </div>
+           </div>
+    
+    
+    
+    </section>
+      
+
+      <!---------------footer section------------->
+			 
+		<footer class="bg-secondary text-center text-white my-1">	
+        <p> @Copyright Waquaraz</p>
+     <p>if you have any suggestion Please contact us at Mob:-898605****</p>
+      </footer>		
+
+      <script  src={{url_for('static', filename='script.js')}}></script>
+  </body>	
+</html>	
